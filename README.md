@@ -1,6 +1,9 @@
 #Default CakePHP App
 
-A CakePHP app containing default configuration, DebugKit and some configuration.
+A CakePHP app containing:
+
+* Default configuration
+* DebugKit
 
 ## Requirements
 
