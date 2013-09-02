@@ -4,6 +4,7 @@ A CakePHP app containing:
 
 * Default configuration
 * DebugKit
+* Bootstrap 3.0
 
 ## Requirements
 

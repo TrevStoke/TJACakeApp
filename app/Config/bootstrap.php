@@ -75,6 +75,17 @@ Cache::config('default', array('engine' => 'File'));
 CakePlugin::load('DebugKit');
 
 /**
+ * Application configuration
+ */
+Configure::write(
+	'Application', array(
+		'name' => 'MyApp',
+		'from_email' => 'from@your_app_domain.com',
+		'contact_mail' => 'contact@your_app_domain.com'
+	)
+);
+
+/**
  * You can attach event listeners to the request lifecycle as Dispatcher Filter . By Default CakePHP bundles two filters:
  *
  * - AssetDispatcher filter will serve your asset files (css, images, js, etc) from your themes and plugins

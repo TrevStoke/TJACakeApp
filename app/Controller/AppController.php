@@ -37,10 +37,21 @@ class AppController extends Controller {
 		'Security',
 		'Session',
 		'Cookie',
-		'DebugKit.Toolbar',
+		//'DebugKit.Toolbar',
 	);
 
 	public $helpers = array(
 		'Js' => array('jquery'),
 	);
+
+	function beforeRender(){
+		if ($this->Session->check('Message.flash')) {
+			$flash = $this->Session->read('Message.flash');
+
+			if ($flash['element'] == 'default') {
+				$flash['element'] = 'flash_default';
+				$this->Session->write('Message.flash', $flash);
+			}
+		}
+	}
 }
