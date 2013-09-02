@@ -34,6 +34,13 @@ App::uses('Controller', 'Controller');
 class AppController extends Controller {
 
 	public $components = array(
+		'Security',
+		'Session',
+		'Cookie',
 		'DebugKit.Toolbar',
+	);
+
+	public $helpers = array(
+		'Js' => array('jquery'),
 	);
 }
